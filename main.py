@@ -77,10 +77,12 @@ def excel_to_dict(sheet_object_instance):
         # create a file with the template for each iteration
         with open(f"output/{new_file_name}.txt", 'w') as new_file:
             new_file.write(template.render(devices=devices[i-1]))
+            print("template rendered")
             new_file.close()
 
     openedJinja2File.close()
 
+    print(devices)
 # ============================================================
 #
 
